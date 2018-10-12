@@ -6,7 +6,9 @@ pdf: true
 # __阮润学__
 
 <div id="webaddress">
-<i class="fi-phone" style="margin-left:1em"></i>
+<i class="fi-male" style="margin-left:1em"></i>
+<a style="margin-left:0.5em">年龄: 25</a>
+<i class="fi-mobile" style="margin-left:1em"></i>
 <a style="margin-left:0.5em">联系电话: 15914313345</a>
 <i class="fi-mail" style="margin-left:1em"></i>
 <a style="margin-left:0.5em">E-Mail: runxueruan@gmail.com</a>
