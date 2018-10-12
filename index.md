@@ -1,86 +1,58 @@
 ---
 layout: cv
-title: Wode "Nimo" Ni
+title: 阮润学
 pdf: true
 ---
-# Wode __Ni__
+# __阮润学__
 
 <div id="webaddress">
-<i class="fi-home" style="margin-left:1em"></i>
-<a href="http://www.cs.cmu.edu/~woden" style="margin-left:0.5em">cs.cmu.edu/~woden</a>
+<i class="fi-phone" style="margin-left:1em"></i>
+<a style="margin-left:0.5em">联系电话: 15914313345</a>
 <i class="fi-mail" style="margin-left:1em"></i>
-<a href="woden@cs.cmu.edu" style="margin-left:0.5em">woden@cs.cmu.edu</a>
+<a style="margin-left:0.5em">E-Mail: runxueruan@gmail.com</a>
 </div>
 
-## Education
+## 教育经历
 
-### __Carnegie Mellon University__ `2018.9 -`
+### __华南理工大学__ `2015.9 - 2017.7`
 ```
-Pittsburgh, PA
+硕士
 ```
-- Ph.D. in Software Engineering
+- 控制理论与控制工程
 
-### __Columbia University__ `2016.9 - 2018.5`
+### __华南理工大学__ `2011.9 - 2015.7`
 ```
-New York, NY
+本科
 ```
-- B.S. in Computer Science, _Magna Cum Laude_
-- Vision, Graphics track
+- 自动化创新班（本硕连读）
 
-### __Dickinson College__ `2013.9 - 2016.5`
-```
-Carlisle, PA
-```
-- B.S. in Computer Science, _Summa Cum Laude_
-- Computer Science Departmental Honors
+## 工作经历
 
-## Publications
+### __华为技术有限公司__  `2017.7 至今`
+___Java后台开发工程师 / 项目负责人___<br>
+- 负责华为IoT物联网平台下，计费组件的设计与开发。计费组件使用Java作为开发语言，用于对物联网平台下的用户进行计费。<br>
+- 参与电信领域离线计费网关的演进方案分析，主要分析5G和边缘计算场景对离线计费网关的影响及其演进方案。<br>
+- 2018年4月至今作为计费组件5人团队leader，负责计费组件在IoT领域上的项目交付，包括需求澄清、工作分配、项目进度把控等日常工作。
 
-### [__Substance and Style: domain-specific languages for mathematical diagrams__](https://2017.splashcon.org/event/dsldi-2017-substance-and-style-domain-specific-languages-for-mathematical-diagrams)
-__Wode Ni\*__, Katherine Ye\*, Joshua Sunshine, Jonathan Aldrich, and Keenan Crane.<br>  _Domain-Specific Language Design and Implementation (DSLDI 2017),  co-located with SPLASH._ <br>
-[[PDF](assets/dsldi.pdf)]
-[[slides](assets/dsldi-presentation.pdf)]
-[[www](http://penrose.ink)]
-[[repo](https://github.com/penrose/penrose)]
+## 项目经历
 
-### [__Whiteboard Scanning Using Super-Resolution__](http://scholar.dickinson.edu/student_honors/221/)
-__Wode Ni__.<br> _Dickinson College Honors Theses. Paper 221._<br>
-[[PDF](assets/superres.pdf)]
+### __基于单体架构的计费组件__  `2017.7 - 2017.12`
+- 单体架构的计费组件基于Spring + Nashorn JS引擎+ Mybatis + GaussDB进行开发，数据接入、数据处理和数据存储都在同一个进程里面。计费组件服务于华为IoT平台，用于对平台下的用户进行计费。
+- 主要负责数据接入层的设计与开发工作。数据接入层从Kafka获取计费数据，然后对数据进行预处理后传递到数据处理模块，并在数据库中保持Kafka消费状态，以此保证exactly once的语意。
+- 项目在商用之前遇到随着数据量逐步增多，处理性能出现下降趋势问题。通过对系统进行优化，使得处理性能提升5倍，达到商用标准。
 
-## Experience
+### __基于微服务架构的计费组件__  `2018.1 至今`
+- 该项目是基于单体架构的计费组件的服务化改造版本，对原有的单体架构进行微服务划分。微服务化后的计费组件部署在华为CSP云平台，包含数据接入微服务、数据处理微服务和数据存储微服务。
+- 主要负责数据接入微服务的设计与开发工作。对数据接入微服务的设计采用插件化的思想，各个插件可独立开发，通过配置文件可将插件组合使用，同时具备灵活性和可扩展性。
+- 数据接入微服务主要分为三类插件，input、filter和output。input插件用于对数据进行采集，支持RPC、Rest、Kafka等多种方式；filter插件主要用于对数据进行预处理，采用责任链对设计模式；output插件用于对预处理后的数据转发到下游服务，也支持RPC、Rest、File等多种方式。
+- 在NB-IoT应用场景下，接入数据的吞吐量大概20000TPS。该场景下存在两个瓶颈：数据接入和数据处理之间Rest通信支持最大的吞吐量为8000TPS左右；数据处理微服务频繁写数据库导致I/O瓶颈。数据接入微服务通过对数据进行打包压缩，降低吞吐量和减轻磁盘I/O压力解决了该问题，
 
-### __Carnegie Mellon University, Research Experiences for Undergraduate__  `2017.5 - 2017.8`
-_Research Assistant_<br>
-__Penrose__ is a system that automatically visualizes mathematics using two domain-specific languages: __Substance__ and __Style__. Co-advised by [Jonathan Aldrich](https://www.cs.cmu.edu/~./aldrich/), [Keenan Crane](https://www.cs.cmu.edu/~kmcrane/), [Joshua Sunshine](http://www.cs.cmu.edu/~jssunshi/), and [Katherine Ye](https://www.cs.cmu.edu/~kqy/), I designed and implemented the Style language, and extended the Substance language to support functions and logically quantified statements.
+## 个人技能
+熟悉Linux下Java编程，Spring、Mybatis等常用框架，熟悉常用的设计模式。 <br>
+熟悉Kafka基本原理及Kafka Java客户端的使用。 <br>
+熟悉数据库基本原理，MySQL。 <br>
+了解微服务架构，服务注册、服务发现、服务熔断等基本原理。 <br>
 
-### __Columbia University, Computer Graphics and User Interfaces Lab__ `2017.1 - 2017.5`
-_Research Assistant_<br>
-Worked with prof. Steven Feiner, on __Cyber Affordance Visualization in Augumented Reality__ project. Developed a Microsoft Hololens application that visualizes the Columbia campus in AR environment.
-
-### __AsiaInfo__ `2015.6 - 2015.8`
-_Software Engineering Intern_<br>
-Worked on server-side web applications and server deployment tools.
-
-
-## Teaching
-
-Teaching Assistant, __Programming Languages and Translators (COMS 4115)__ `Columbia, 2017 - 2018` <br>
-Teaching Assistant, __Introduction to Java II (COMP 132)__ `Dickinson, 2016` <br>
-Peer Tutor, __Data Structures and Problem Solving (COMP 232)__ `Dickinson, 2016` <br>
-Computer Lab Consultant `Dickinson, 2014 - 2016` <br>
-
-
-## Honors & Awards
-
-Phi Beta Kappa `Dickinson, 2018` <br>
-Excellence in Computer Science Award `Columbia, 2018` <br>
-Tau Beta Pi, Engineering Honor Society `Columbia, 2017` <br>
-Computer Science Departmental Honors `Dickinson, 2016` <br>
-Pi Mu Epsilon, Mathematics Honor Society `Dickinson, 2016` <br>
-Upsilon Pi Epsilon, Computer Science Honor Society  `Dickinson, 2016` <br>
-Alpha Lambda Delta, First year Honor Society `Dickinson, 2013`<br>
-John Montgomery Scholarship `Dickinson, 2013` <br>
-
-<!-- ### Footer
-
-Last updated: May 2013 -->
+## 自我评价
+热爱编程，学习能力强，在职期间获得优秀新员工、明日之星等奖项。<br>
+喜欢学习新技术，并运用到日常的设计与开发中。<br>
